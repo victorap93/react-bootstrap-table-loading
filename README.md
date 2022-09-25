@@ -24,17 +24,15 @@ export default () => {
   return <Table striped bordered>
     <thead>
       <tr>
-        <th>First col</th>
-        <th>Second col</th>
-        <th>Third col</th>
-        <th>cd</th>
+        <th>First column</th>
+        <th>Second column</th>
+        <th>Third column</th>
       </tr>
     </thead>
     <TableLoading
       columns={[
         { min: 2, max: 6 },
         { min: 3, max: 10 },
-        { min: 4, max: 12 },
         { min: 3, max: 8 }
       ]}
       lines={4}

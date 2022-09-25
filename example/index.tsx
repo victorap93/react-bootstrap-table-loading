@@ -14,17 +14,15 @@ const App = () => {
           <Table className='mt-3' striped bordered>
             <thead>
               <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
+                <th>First column</th>
+                <th>Second column</th>
+                <th>Third column</th>
               </tr>
             </thead>
             <TableLoading
               columns={[
                 { min: 2, max: 6 },
                 { min: 3, max: 10 },
-                { min: 4, max: 12 },
                 { min: 3, max: 8 }
               ]}
               lines={4}
