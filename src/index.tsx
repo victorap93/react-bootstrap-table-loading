@@ -38,11 +38,11 @@ export const TableLoading = ({ columns, lines, body = true }: TableLoadingProps)
 
   const bodyRender = (component: JSX.Element[]) => {
     return body
-      ? <body>{component}</body>
+      ? <tbody>{component}</tbody>
       : component
   }
 
-  return (bodyRender(
+  return bodyRender(
     real_lines.map((real_line, real_line_index) => {
       return <tr key={real_line_index + 1}>
         {real_line.map((qtd_column, qtd_column_index) => {
@@ -53,6 +53,6 @@ export const TableLoading = ({ columns, lines, body = true }: TableLoadingProps)
           </td>
         })}
       </tr>
-    }))
-  );
+    })
+  )
 }
