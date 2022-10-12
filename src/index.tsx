@@ -39,7 +39,7 @@ export const TableLoading = ({ columns, lines, body = true }: TableLoadingProps)
   const bodyRender = (component: JSX.Element[]) => {
     return body
       ? <tbody>{component}</tbody>
-      : component
+      : <>{component}</>
   }
 
   return bodyRender(
