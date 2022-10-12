@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -38,7 +38,11 @@
   "name": "react-bootstrap-table-loading",
   "description": "This component create a ramdom size placeholder.",
   "author": "Victor Aparecido Barbato Rossi",
-  "homepage": "https://github.com/victorap93/react-bootstrap-table-loading",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victorap93/react-bootstrap-table-loading"
+  },
+  "homepage": "https://github.com/victorap93",
   "module": "dist/react-bootstrap-table-loading.esm.js",
   "keywords": ["react", "react-bootstrap", "bootstrap", "table-loading", "table", "loading"],
   "size-limit": [

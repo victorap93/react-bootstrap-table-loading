@@ -45,10 +45,11 @@ export default () => {
 
 All these props are required.
 
-| Name    | Type   | Default | Description                            |
-|---------|--------|---------|----------------------------------------|
-| columns | Array  | -       | Array with `Column` object type values |
-| lines   | number | -       | Number of lines                        |
+| Name     | Type            | Default | Description                                                                   |
+| -------- | --------------- | ------- | ----------------------------------------------------------------------------- |
+| columns  | Array \| number | -       | **Required**. Array with `Column` object type values or numeric column number |
+| lines    | number          | -       | **Required**. Number of lines                                                 |
+| body     | boolean         | true    | Render with `<tbody>` element                                                 |
 
 ## License
 MIT
