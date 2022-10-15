@@ -1,6 +1,6 @@
 # React Bootstrap Table Loading
 
-This component create a ramdom size placeholder.
+This component creates a placeholder of random size with specific number of rows and columns.
 
 ## Install
 
@@ -10,7 +10,7 @@ npm install react-bootstrap-table-loading
 
 ## Usage
 
-This example show a complete component usage.
+Component usage example.
 
 ![TableLoading](https://github.com/victorap93/react-bootstrap-table-loading/blob/main/attachments/TableLoading.gif?raw=true)
 
@@ -40,6 +40,8 @@ export default () => {
   </Table>
 }
 ```
+
+You can see a interative component in [Storybook](https://main--634ac42f704ee9968be99133.chromatic.com).
 
 ## Props
 
