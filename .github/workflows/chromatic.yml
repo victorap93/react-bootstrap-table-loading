@@ -2,7 +2,10 @@
 name: 'Chromatic Publish'
 
 # Event for the workflow
-on: push
+on: 
+  push:
+    branches:
+      - main
 
 # List of jobs
 jobs:
