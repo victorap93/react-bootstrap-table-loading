@@ -20,11 +20,7 @@ const App = () => {
               </tr>
             </thead>
             <TableLoading
-              columns={[
-                { min: 2, max: 6 },
-                { min: 3, max: 10 },
-                { min: 3, max: 8 }
-              ]}
+              columns={3}
               lines={4}
             />
           </Table>

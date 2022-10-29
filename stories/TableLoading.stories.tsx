@@ -1,5 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
+
 import { TableLoading, TableLoadingProps } from '../src';
 
 const meta: Meta = {
@@ -19,11 +20,18 @@ const Template: Story<TableLoadingProps> = args => <table width="100%"><TableLoa
 export const Default = Template.bind({});
 
 Default.args = {
+  columns: 4,
+  lines: 4
+};
+
+export const CustomColumnSizes = Template.bind({});
+
+CustomColumnSizes.args = {
   columns: [
-    { min: 2, max: 6 }, 
-    { min: 3, max: 10 }, 
+    { min: 2, max: 4 }, 
+    { min: 4, max: 10 }, 
     { min: 4, max: 12 },
-    { min: 3, max: 8 }
+    { min: 4, max: 8 }
   ],
   lines: 4
 };

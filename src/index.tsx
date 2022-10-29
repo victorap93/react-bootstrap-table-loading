@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Placeholder } from 'react-bootstrap';
 
-type QtdColumn = number[]
+type Td = number[]
 
-type RealLines = QtdColumn[]
+type Tr = Td[]
 
 export type Column = {
   min: number,
@@ -13,42 +13,43 @@ export type Column = {
 export type TableLoadingProps = {
   columns: Column[] | number,
   lines: number,
-  body?: boolean
+  tbody?: boolean,
+  tbodyProps?: object
 }
 
-export const TableLoading = ({ columns, lines, body = true }: TableLoadingProps) => {
+export const TableLoading = ({ columns, lines, tbody = true, tbodyProps = {} }: TableLoadingProps) => {
 
-  const [real_lines, setRealLines] = useState<RealLines>([]);
+  const [trs, setTrs] = useState<Tr>([]);
 
   useEffect(() => {
-    let real_lines: RealLines = [];
+    let trs: Tr = [];
     for (let x = 0; x < lines; x++) {
-      let qtd_column: QtdColumn = [];
+      let tds: Td = [];
       (
         Array.isArray(columns)
           ? columns
           : Array.from({ length: columns }, () => { return { min: 4, max: 12 } })
       ).map(({ min, max }: Column) => {
-        qtd_column.push(Math.floor(Math.random() * (max - min)) + min)
+        tds.push(Math.floor(Math.random() * (max - min)) + min)
       })
-      real_lines.push(qtd_column)
+      trs.push(tds)
     }
-    setRealLines(real_lines)
+    setTrs(trs)
   }, [columns, lines]);
 
   const bodyRender = (component: JSX.Element[]) => {
-    return body
-      ? <tbody>{component}</tbody>
+    return tbody
+      ? <tbody {... tbodyProps}>{component}</tbody>
       : <>{component}</>
   }
 
   return bodyRender(
-    real_lines.map((real_line, real_line_index) => {
-      return <tr key={real_line_index + 1}>
-        {real_line.map((qtd_column, qtd_column_index) => {
-          return <td style={{ cursor: "wait" }} key={qtd_column_index}>
+    trs.map((tds, trIndex) => {
+      return <tr key={trIndex + 1}>
+        {tds.map((td, tdIndex) => {
+          return <td style={{ cursor: "wait" }} key={tdIndex}>
             <Placeholder as="div" animation="glow">
-              <Placeholder xs={qtd_column} />
+              <Placeholder xs={td} />
             </Placeholder>
           </td>
         })}

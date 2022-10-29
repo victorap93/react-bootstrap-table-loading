@@ -30,11 +30,7 @@ export default () => {
       </tr>
     </thead>
     <TableLoading
-      columns={[
-        { min: 2, max: 6 },
-        { min: 3, max: 10 },
-        { min: 3, max: 8 }
-      ]}
+      columns={4}
       lines={4}
     />
   </Table>
@@ -45,13 +41,23 @@ You can see a interative component in [Storybook](https://main--634ac42f704ee996
 
 ## Props
 
-All these props are required.
+### TableLoading
 
-| Name     | Type            | Default | Description                                                                   |
-| -------- | --------------- | ------- | ----------------------------------------------------------------------------- |
-| columns  | Array \| number | -       | **Required**. Array with `Column` object type values or numeric column number |
-| lines    | number          | -       | **Required**. Number of lines                                                 |
-| body     | boolean         | true    | Render with `<tbody>` element                                                 |
+| Name       | Type               | Default | Description                                                                   |
+| ---------- | ------------------ | ------- | ----------------------------------------------------------------------------- |
+| columns    | `Column` \| number | -       | **Required**. Array with `Column` object type values or numeric column number |
+| lines      | number             | -       | **Required**. Number of lines                                                 |
+| tbody      | boolean            | true    | Render with `<tbody>` element                                                 |
+| tbodyProps | object             | {}      | tbody properties                                                              |
+
+## Types
+
+### Column
+
+| Name | Type   | Default | Description                |
+| ---- | ------ | ------- | -------------------------- |
+| min  | number | -       | **Required**. Min col size |
+| max  | number | -       | **Required**. Max col size |
 
 ## License
 MIT
